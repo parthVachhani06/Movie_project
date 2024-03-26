@@ -1,0 +1,27 @@
+img{
+    height: auto;
+}
+
+.indexshow{
+    background-image: url("https://i.stack.imgur.com/3T2NS.jpg");
+    background-size: cover;
+}
+
+.viewshow{
+    background-image: url("https://help.nflxext.com/0af6ce3e-b27a-4722-a5f0-e32af4df3045_what_is_netflix_5_en.png");
+    background-size: cover;
+    
+}
+
+.editshow{
+    background-image: url("https://sm.mashable.com/mashable_in/image/n/netflix-is/netflix-is-testing-a-shuffle-play-feature-again_s1a5.jpg");
+    background-size: cover;
+    background-color: black;
+
+}
+
+.card{
+    background-color: black;
+    color: aliceblue;
+    
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Form</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body class="indexshow">
+  <header class="p-3 text-danger">
+    <div class="row d-flex">
+        <button class="btn btn-danger">
+          <a href="/views" class="text-light ">All </a>
+        </button>
+    </div>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-6"></div>
+      <div class="col-6 mt-5">
+        <form action="/movieform" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="movieName" class="text-danger ">Name:</label>
+            <input type="text" class="form-control bg-info-subtle" name="movieName" placeholder="Enter movie name">
+          </div>
+          <div class="form-group">
+            <label for="description" class="text-danger ">Description:</label>
+            <textarea class="form-control bg-info-subtle" name="description" rows="3"
+              placeholder="Enter movie description"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="rate" class="text-danger ">Rate:</label>
+            <input type="number" class="form-control bg-info-subtle" name="rate" placeholder="Enter movie rate">
+          </div>
+          <div class="form-group">
+            <label for="type" class="text-danger ">Type:</label>
+            <select class="form-control bg-info-subtle" name="type">
+              <option>Action</option>
+              <option>Comedy</option>
+              <option>Drama</option>
+              <option>Sci-Fi</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="language" class="text-danger">Language:</label>
+            <input type="text" class="form-control bg-info-subtle" name="language" placeholder="Enter movie language">
+          </div>
+          <div class="form-group">
+            <label for="price" class="text-danger">image</label><br />
+            <input type="file" name="poster">
+          </div>
+          <button type="submit" class="btn btn-danger">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

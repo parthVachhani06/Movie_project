@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product List Form</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link  href="../style.css" type="text/css" rel="stylesheet">
+</head>
+<body class="editshow">
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h4>Movie Update Form</h4>
+          </div>
+          <div class="card-body">
+            <form  action="/movieform" method="post">
+                <input type="text" name="editId" value="<%=  singlemovie.id %>" hidden>
+                <div class="form-group">
+                  <label for="movieName">Name:</label>
+                  <input type="text" class="form-control" name="movieName" placeholder="Enter movie name"  value="<%= singlemovie.movieName %>">
+                </div>
+                <div class="form-group">
+                  <label for="description">Description:</label>
+                  <textarea class="form-control" name="description" rows="3" placeholder="Enter movie description"  value="<%= singlemovie.description %>"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="rate">Rate:</label>
+                  <input type="number" class="form-control" name="rate" placeholder="Enter movie rate"  value="<%= singlemovie.rate %>">
+                </div>
+                <div class="form-group">
+                  <label for="type">Type:</label>
+                  <select class="form-control" name="type"  value="<%= singlemovie.type %>">
+                    <option>Action</option>
+                    <option>Comedy</option>
+                    <option>Drama</option>
+                    <option>Sci-Fi</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="language">Language:</label>
+                  <input type="text" class="form-control" name="language" placeholder="Enter movie language"  value="<%= singlemovie.language %>">
+                </div>
+                <button type="submit" class="btn btn-danger">Update</button>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
